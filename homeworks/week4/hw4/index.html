@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hide or show</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+		
+        }
+
+        .character {
+            font-size:20px;
+            background-color: #C7FF91;
+            text-align: center;
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            margin-left: 490px;
+            margin-top: 100px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            
+        }
+        
+        .button {
+			display: flex;
+			justify-content: center;
+        }
+        
+        .btn_hide {
+				width: 100px;
+				background: gray;
+				border-radius: 5px;
+				color: white;
+				text-align: center;
+				margin: 0 10px;
+				padding: 10px 20px;
+			}
+			.btn_hide:hover {
+				cursor: pointer;
+			}
+			.btn_show {
+				width: 100px;
+				background: gray;
+				border-radius: 5px;
+				color: white;
+				text-align: center;
+				margin: 0 10px;
+				padding: 10px 20px;
+			}
+			.btn_show:hover {
+				cursor: pointer;
+			}
+    </style>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            /* make a function'q' that i can select what i want */
+            const q = n => {
+                let select = document.querySelector(n);
+                select.btn_hide = () => element.style.visibility = "hidden";
+                select.btn_show = () => element.style.visibility = "visible";
+                return select;
+            }
+            
+            /* 操作選到的物件 */
+            let element = q('.character');
+            
+            /*element.btn_hide() // 隱藏*/
+            q('.btn_hide').addEventListener("click", () => element.btn_hide());
+            /*element.btn_show() // 顯示*/
+            q('.btn_show').addEventListener("click", () => element.btn_show());
+        })
+    </script>
+</head>
+<body>
+        <div class="character">It's Patty</div>
+		<div class="button">
+			<div class="btn_hide"> u can't see me !</div>
+			<div class="btn_show"> let me out !</div>
+		</div>
+</body>
+</html>
