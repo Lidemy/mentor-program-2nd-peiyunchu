@@ -110,7 +110,7 @@
                           }
                         }
                       ?>
-                      <div class="add-sub-comment">
+                      <div class="add__sub__comment">
                           <h3>新增留言</h3>
                           <form method='POST' action='./add_comment.php'>
                             <input type='hidden' value="<?php echo $parent_id; ?>" name="parent_id" />
