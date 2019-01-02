@@ -95,7 +95,7 @@
                         if ($result_sub) {
                           while($row_sub = $result_sub->fetch_assoc()) {
                       ?>
-                        <div class="sub-comment">
+                        <div class="sub__comment">
                             <div class="sub-comment__author">作者：<?= $row_sub['nickname'] ?></div>
                             <div class="sub-comment__content"><?= $row_sub['content'] ?></div>
                             <div class="sub-comment__time">發言時間：<?= $row_sub['created_at']?></div>
