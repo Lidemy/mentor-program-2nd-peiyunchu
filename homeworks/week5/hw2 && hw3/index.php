@@ -52,7 +52,7 @@
         </form>
       </div>
       <?php
-          $count_sql = "SELECT count(*) as count FROM huli_comments where parent_id=0";
+          $count_sql = "SELECT count(*) as count FROM peiyunchu_comments where parent_id=0";
           $count_result = $conn->query($count_sql);
           if ($count_result && $count_result->num_rows > 0) {
             $count = $count_result->fetch_assoc()['count'];
